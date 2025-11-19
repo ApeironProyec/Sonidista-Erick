@@ -1,7 +1,7 @@
 
-  # Premium Mobile Portfolio Design
+  # Sonidista-Erick
 
-  This is a code bundle for Premium Mobile Portfolio Design. The original project is available at https://www.figma.com/design/UJ1uKlsO8qDQnMgIGpAQcC/Premium-Mobile-Portfolio-Design.
+  This is a code bundle for Sonidista-Erick. The original project is available at https://www.figma.com/design/UJ1uKlsO8qDQnMgIGpAQcC/Sonidista-Erick.
 
   ## Running the code
 
