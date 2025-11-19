@@ -13,60 +13,27 @@ export default function App() {
       {/* Ambient Stage Light Effect */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {/* Top-Right Warm Glow */}
-        <motion.div
-          className="absolute -top-1/4 -right-1/4 w-[800px] h-[800px] rounded-full"
+        <div
+          className="absolute -top-1/4 -right-1/4 w-[800px] h-[800px] rounded-full animate-blob-warm"
           style={{
             background: 'radial-gradient(circle, #D4AF37 0%, transparent 70%)',
             filter: 'blur(80px)'
           }}
-          animate={{
-            x: [0, 50, -30, 0],
-            y: [0, -40, 30, 0],
-            scale: [1, 1.2, 0.95, 1],
-            opacity: [0.25, 0.35, 0.22, 0.25]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
         />
         {/* Bottom-Left Cool Shadow */}
-        <motion.div
-          className="absolute -bottom-1/4 -left-1/4 w-[800px] h-[800px] rounded-full"
+        <div
+          className="absolute -bottom-1/4 -left-1/4 w-[800px] h-[800px] rounded-full animate-blob-cool"
           style={{
             background: 'radial-gradient(circle, #334155 0%, transparent 70%)',
             filter: 'blur(80px)'
           }}
-          animate={{
-            x: [0, -40, 50, 0],
-            y: [0, 30, -50, 0],
-            scale: [1, 0.9, 1.15, 1],
-            opacity: [0.18, 0.28, 0.15, 0.18]
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
         />
         {/* Additional Accent Light - Purple/Blue */}
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-[600px] h-[600px] rounded-full -translate-x-1/2 -translate-y-1/2"
+        <div
+          className="absolute top-1/2 left-1/2 w-[600px] h-[600px] rounded-full -translate-x-1/2 -translate-y-1/2 animate-blob-accent"
           style={{
             background: 'radial-gradient(circle, #7C3AED 0%, transparent 70%)',
             filter: 'blur(100px)'
-          }}
-          animate={{
-            x: [-100, 100, -100],
-            y: [-50, 50, -50],
-            scale: [0.8, 1.1, 0.8],
-            opacity: [0.08, 0.15, 0.08]
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut"
           }}
         />
       </div>
