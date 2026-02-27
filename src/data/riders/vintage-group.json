@@ -1,0 +1,48 @@
+{
+  "slug": "vintage-group",
+  "nombre": "Vintage Group",
+  "descripcion": "Rider Técnico Oficial 2026",
+  "contacto": "Contacto vía producción",
+  "inputList": [
+    { "canal": 1, "instrumento": "Voz 1", "microfono": "SM58 o equivalente", "observaciones": "Pedestal recto + XLR ≥10m" },
+    { "canal": 2, "instrumento": "Voz 2", "microfono": "SM58 o equivalente", "observaciones": "Pedestal recto + XLR ≥10m" },
+    { "canal": 3, "instrumento": "Guitarra Eléctrica", "microfono": "DI Box", "observaciones": "TS 1/4\" + XLR ≥10m" },
+    { "canal": 4, "instrumento": "Bajo", "microfono": "DI Box", "observaciones": "TS 1/4\" + XLR ≥10m" },
+    { "canal": 5, "instrumento": "Teclado", "microfono": "DI Box", "observaciones": "TS 1/4\" + XLR" },
+    { "canal": 6, "instrumento": "Secuencias L", "microfono": "XLR", "observaciones": "5m" },
+    { "canal": 7, "instrumento": "Secuencias R", "microfono": "XLR", "observaciones": "5m" },
+    { "canal": 8, "instrumento": "Bombo", "microfono": "Dinámico", "observaciones": "XLR" },
+    { "canal": 9, "instrumento": "Caja", "microfono": "Dinámico", "observaciones": "Jirafa corto" },
+    { "canal": 10, "instrumento": "Hi-Hat", "microfono": "Condensador", "observaciones": "Jirafa corto + Phantom 48V" },
+    { "canal": 11, "instrumento": "Tom I", "microfono": "Dinámico", "observaciones": "Clip" },
+    { "canal": 12, "instrumento": "Tom III (Floor)", "microfono": "Dinámico", "observaciones": "Clip" },
+    { "canal": 13, "instrumento": "Overhead L", "microfono": "Condensador", "observaciones": "Jirafa alto + Phantom 48V" },
+    { "canal": 14, "instrumento": "Overhead R", "microfono": "Condensador", "observaciones": "Jirafa alto + Phantom 48V" }
+  ],
+  "foh": {
+    "consolaMinima": "Digital mínimo 16 canales",
+    "auxiliares": "6 auxiliares mínimo",
+    "procesamiento": "Compresores y efectos integrados",
+    "paMinimo": "Sistema acorde al venue"
+  },
+  "monitores": {
+    "wedges": "1 mezcla frontal",
+    "inEar": "4 líneas XLR (wired)",
+    "sidefills": "1 mezcla adicional"
+  },
+  "bateria": {
+    "configuracion": "Tom I y Tom III obligatorios. No instalar Tom II.",
+    "notas": "Kit estándar Shure o Behringer."
+  },
+  "resumenTecnico": {
+    "microfonos": 11,
+    "diBox": 3,
+    "cablesXLR": 18,
+    "cablesTS": 3
+  },
+  "notasCriticas": [
+    "Phantom Power (+48V) requerido para Hi-Hat y Overheads.",
+    "Todo el cableado debe ser balanceado."
+  ],
+  "stagePlot": "/assets/stageplots/vintage-group.png"
+}

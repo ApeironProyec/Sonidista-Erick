@@ -1,0 +1,83 @@
+# INFORME TÉCNICO DEL REPOSITORIO
+
+## 1. Resumen Ejecutivo
+Proyecto **frontend estático** basado en **Vite + React + TypeScript (sin tipado estricto configurado)**, generado desde Figma Make.  
+Estado general: **desplegable en Vercel** como sitio estático, pero con deuda técnica relevante para producción (dependencias vulnerables/dev, imports no estándar, textos corruptos por encoding, scripts incompletos, artefactos build versionados).
+
+## 2. Stack Tecnológico Detectado
+- Framework/runtime:
+  - React 18 + Vite 6 ([package.json](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\package.json))
+- Lenguajes:
+  - TypeScript/TSX, CSS, HTML
+- UI/libs:
+  - `framer-motion`, `lucide-react`, `@radix-ui/*`, `class-variance-authority`, `clsx`, `tailwind-merge`
+- Config detectada:
+  - [vite.config.ts](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\vite.config.ts)
+  - [package.json](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\package.json)
+  - [index.html](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\index.html)
+- Config **no detectada**:
+  - `vercel.json`, `tsconfig.json`, `tailwind.config.*`, `postcss.config.*`
+- Scripts:
+  - `dev: vite`
+  - `build: vite build`
+  - Falta `start`/`preview`
+
+## 3. Arquitectura
+- Tipo de app: **SPA estática (CSR)**.
+- SSR/SSG/híbrido: **No**.
+- API Routes / serverless functions: **No** (no hay `api/`, `pages/api`, `functions/`).
+- Servicios externos:
+  - No DB/Auth/Storage.
+  - Solo enlaces externos (WhatsApp/TikTok/Facebook) en [ContactSection.tsx](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\src\components\sections\ContactSection.tsx).
+- Variables de entorno:
+  - No uso de `process.env` ni `import.meta.env` en `src`.
+
+Árbol principal:
+- `/src` (componentes y estilos)
+- `/build` (artefactos de build comprometidos en repo)
+- `/package.json`, `/vite.config.ts`, `/index.html`
+
+## 4. Compatibilidad con Vercel
+- Despliegue directo: **Sí**, como proyecto Vite estático.
+- Ajustes recomendados:
+  - Definir en Vercel: Build command `npm run build`, Output `build`.
+  - Añadir script `preview` o `start` para flujos locales/CI.
+- Conflictos detectados:
+  - Imports no estándar con versión en el specifier (`@radix-ui/react-slot@1.1.2`, etc.) en [button.tsx](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\src\components\ui\button.tsx:2) y [separator.tsx](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\src\components\ui\separator.tsx:4), sostenidos por aliases en [vite.config.ts](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\vite.config.ts). Funciona, pero es frágil.
+- Dependencias incompatibles con serverless: **No aplica** (no backend).
+- Procesos persistentes incompatibles: **No**.
+
+## 5. Riesgos y Problemas Detectados
+- Seguridad/dependencias:
+  - `npm audit` reporta **2 vulnerabilidades**: 1 alta (`rollup` transitive), 1 moderada (`vite`), con fix disponible.
+- Calidad de código:
+  - Texto con encoding roto en UI (ej. `IngenierA-a`, `ProducciA3n`, `Agendar vA-a`) en [HeroSection.tsx](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\src\components\sections\HeroSection.tsx:44), [ContactSection.tsx](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\src\components\sections\ContactSection.tsx:24), [B2BSection.tsx](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\src\components\sections\B2BSection.tsx:53).
+- Configuración:
+  - Falta `tsconfig.json` en proyecto TS.
+  - `.gitignore` solo ignora `node_modules`; `build/` queda versionado ([.gitignore](C:\Users\Erick\Downloads\Sonidista-Erick\Sonidista-Erick\.gitignore)).
+- Scripts/operación:
+  - No hay `start`/`preview`, ni `lint`, ni `test`, ni `typecheck`.
+- Código innecesario:
+  - Dependencias declaradas pero no usadas en `src`: `next-themes`, `vaul`.
+- Rendimiento:
+  - Build actual: `index.js` **310.20 kB** (gzip **98.47 kB**), CSS **36.78 kB** (gzip **6.66 kB**), imagen **82.40 kB**.
+  - Sin lazy loading ni code splitting explícito (bundle único principal).
+
+## 6. Recomendaciones Técnicas
+1. Seguridad:
+   - Actualizar `vite` a versión parcheada (>=6.4.1) y regenerar lockfile.
+2. Higiene de repo:
+   - Ignorar `build/` en `.gitignore`.
+3. Robustez de build:
+   - Reemplazar imports con sufijo de versión por imports canónicos (`@radix-ui/react-slot`, etc.) y simplificar aliases de Vite.
+4. Calidad:
+   - Corregir encoding de textos (UTF-8 real) en secciones visibles.
+5. Mantenibilidad:
+   - Agregar `tsconfig.json`, scripts `preview`, `typecheck`, `lint`.
+6. Dependencias:
+   - Eliminar `next-themes` y `vaul` si no se usan.
+7. Rendimiento:
+   - Aplicar `React.lazy`/`dynamic import` para secciones no críticas y revisar reducción de utilidades CSS generadas.
+
+## 7. Nivel de Complejidad del Proyecto (Bajo / Medio / Alto)
+**Bajo** en lógica funcional, **Medio** en calidad operativa para producción por deuda técnica de configuración, seguridad de dependencias y mantenibilidad.

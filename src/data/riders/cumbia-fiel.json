@@ -1,0 +1,44 @@
+{
+  "slug": "cumbia-fiel",
+  "nombre": "Cumbia Fiel",
+  "descripcion": "Rider técnico oficial",
+  "contacto": "manager@cumbiafiel.com",
+  "inputList": [
+    {
+      "canal": 1,
+      "instrumento": "Voz Principal",
+      "microfono": "Shure SM58",
+      "observaciones": "Pedestal recto"
+    },
+    {
+      "canal": 2,
+      "instrumento": "Coros",
+      "microfono": "Shure SM58",
+      "observaciones": "Pedestal jirafa"
+    },
+    {
+      "canal": 3,
+      "instrumento": "Bombo",
+      "microfono": "AKG D112",
+      "observaciones": "Con base corta"
+    },
+    {
+      "canal": 4,
+      "instrumento": "Bajo",
+      "microfono": "DI Activa",
+      "observaciones": "Salida post-EQ"
+    }
+  ],
+  "foh": {
+    "consolaMinima": "Consola digital 24ch",
+    "auxiliares": "6 envíos auxiliares pre-fader",
+    "procesamiento": "Compresor en voces y reverb estéreo",
+    "paMinimo": "Sistema line array para 500 personas"
+  },
+  "monitores": {
+    "wedges": "4 wedges de 12\"",
+    "inEar": "No requerido",
+    "sidefills": "1 par estéreo recomendado"
+  },
+  "stagePlot": "/assets/stageplots/cumbia-fiel.svg"
+}

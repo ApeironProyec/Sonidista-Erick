@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#0f1115" />
+  <rect x="80" y="80" width="1040" height="540" rx="8" fill="none" stroke="#3b4554" stroke-width="2" />
+  <text x="600" y="130" fill="#d5dbe6" font-size="28" text-anchor="middle" font-family="Arial, sans-serif">Stage Plot - Orquesta Da Capo</text>
+  <rect x="520" y="180" width="160" height="70" fill="#1e2430" stroke="#526079" />
+  <text x="600" y="224" fill="#d5dbe6" font-size="20" text-anchor="middle" font-family="Arial, sans-serif">Batería</text>
+  <rect x="240" y="290" width="150" height="60" fill="#1e2430" stroke="#526079" />
+  <text x="315" y="328" fill="#d5dbe6" font-size="18" text-anchor="middle" font-family="Arial, sans-serif">Bajo</text>
+  <rect x="430" y="290" width="150" height="60" fill="#1e2430" stroke="#526079" />
+  <text x="505" y="328" fill="#d5dbe6" font-size="18" text-anchor="middle" font-family="Arial, sans-serif">Violín</text>
+  <rect x="620" y="290" width="150" height="60" fill="#1e2430" stroke="#526079" />
+  <text x="695" y="328" fill="#d5dbe6" font-size="18" text-anchor="middle" font-family="Arial, sans-serif">Teclado L</text>
+  <rect x="810" y="290" width="150" height="60" fill="#1e2430" stroke="#526079" />
+  <text x="885" y="328" fill="#d5dbe6" font-size="18" text-anchor="middle" font-family="Arial, sans-serif">Teclado R</text>
+  <rect x="520" y="500" width="160" height="60" fill="#1e2430" stroke="#526079" />
+  <text x="600" y="538" fill="#d5dbe6" font-size="18" text-anchor="middle" font-family="Arial, sans-serif">Voz Líder</text>
+</svg>

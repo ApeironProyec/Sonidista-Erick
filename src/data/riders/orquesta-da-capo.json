@@ -1,0 +1,50 @@
+{
+  "slug": "orquesta-da-capo",
+  "nombre": "Orquesta Da Capo",
+  "descripcion": "Rider técnico oficial",
+  "contacto": "produccion@orquestadacapo.com",
+  "inputList": [
+    {
+      "canal": 1,
+      "instrumento": "Voz Líder",
+      "microfono": "Shure Beta 58A",
+      "observaciones": "Pedestal recto"
+    },
+    {
+      "canal": 2,
+      "instrumento": "Violín 1",
+      "microfono": "DI + mic clip",
+      "observaciones": "Canal duplicado disponible"
+    },
+    {
+      "canal": 3,
+      "instrumento": "Teclado L",
+      "microfono": "DI Activa",
+      "observaciones": ""
+    },
+    {
+      "canal": 4,
+      "instrumento": "Teclado R",
+      "microfono": "DI Activa",
+      "observaciones": ""
+    },
+    {
+      "canal": 5,
+      "instrumento": "Bajo",
+      "microfono": "DI Activa",
+      "observaciones": "Preamp propio"
+    }
+  ],
+  "foh": {
+    "consolaMinima": "Consola digital 32ch",
+    "auxiliares": "8 auxiliares pre-fader",
+    "procesamiento": "4 compresores, 2 reverbs, 1 delay",
+    "paMinimo": "Sistema de 3 vías para 800 personas"
+  },
+  "monitores": {
+    "wedges": "6 wedges de 12\"",
+    "inEar": "2 sistemas estéreo",
+    "sidefills": "1 par estéreo obligatorio"
+  },
+  "stagePlot": "/assets/stageplots/orquesta-da-capo.svg"
+}
