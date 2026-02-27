@@ -4,6 +4,7 @@ import { SocialEventsSection } from "../components/sections/SocialEventsSection"
 import { NationalCoverageSection } from "../components/sections/NationalCoverageSection";
 import { B2BSection } from "../components/sections/B2BSection";
 import { AddonsSection } from "../components/sections/AddonsSection";
+import { RidersSection } from "../components/sections/RidersSection";
 import { Footer } from "../components/sections/Footer";
 
 export function HomePage() {
@@ -40,6 +41,7 @@ export function HomePage() {
         <NationalCoverageSection />
         <B2BSection />
         <AddonsSection />
+        <RidersSection />
         <Footer />
       </div>
     </div>
